@@ -1,0 +1,48 @@
+---
+title: 'Order of Sale in Budget-Constrained Auctions: An Experimental Study'
+author: "Arkady Konovalov^[Department of Economics, University of Zurich; arkady.konovalov@uzh.ch.]"
+date: "`r format(Sys.time(), '%B %d, %Y')`"
+
+fontfamily: fourier
+fontsize: 12pt
+geometry: margin=1in
+documentclass: article
+biblio-style: apalike
+bibliography: all.bib
+
+
+thanks: The author would like to thank Paul J. Healy, John Kagel, Ian Krajbich, Dan
+  Levin, members of the OSU Theory/Experimental group, and participants of the ISDN
+  2017  meeting for their helpful comments and conversations.
+abstract: |-
+  The presence of financial constraints changes traditional auction theory predictions. In a case of multiple objects, such constraints may affect revenue equivalence and efficiency of different auction formats. Following Benoit and Krishna (2001), we consider a simple complete information setting with three financially constrained bidders and two objects that have different values common to all the bidders. Taking the theory to the lab, we study two orders of sale, with the more expensive object being sold first or last. The former is predicted by the theory to be weakly revenue-dominant, which is confirmed by the results of our laboratory experiment.
+
+
+  Keywords: auction, budget constraints, first price, English, laboratory experiment.
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Introduction
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+Here is your introduction. It should describe clearly the rationale for the study being done and the previous work related with the study. It should also tell readers about your specific hypothese/questions being addressed. Citations will be like this @krajbich_visual_2010 or like this [@konovalov_revealed_2016].
+
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+$$ y = x^2 $$
+
+# Results
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
