@@ -8,7 +8,7 @@ fontsize: 12pt
 geometry: margin=1in
 documentclass: article
 biblio-style: apalike
-bibliography: all.bib
+bibliography: ref.bib
 
 
 thanks: The author would like to thank Paul J. Healy, John Kagel, Ian Krajbich, Dan
