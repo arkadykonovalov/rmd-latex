@@ -1,6 +1,6 @@
 ---
-title: 'Order of Sale in Budget-Constrained Auctions: An Experimental Study'
-author: "Arkady Konovalov^[Department of Economics, University of Zurich; arkady.konovalov@uzh.ch.]"
+title: 'Here Goes the Title: An RMarkdown Latex Template'
+author: "John Doe^[University of Nowhere]"
 date: "`r format(Sys.time(), '%B %d, %Y')`"
 
 fontfamily: fourier
@@ -11,14 +11,12 @@ biblio-style: apalike
 bibliography: ref.bib
 
 
-thanks: The author would like to thank Paul J. Healy, John Kagel, Ian Krajbich, Dan
-  Levin, members of the OSU Theory/Experimental group, and participants of the ISDN
-  2017  meeting for their helpful comments and conversations.
+thanks: Footnote on the title with acknowledgments.
 abstract: |-
-  The presence of financial constraints changes traditional auction theory predictions. In a case of multiple objects, such constraints may affect revenue equivalence and efficiency of different auction formats. Following Benoit and Krishna (2001), we consider a simple complete information setting with three financially constrained bidders and two objects that have different values common to all the bidders. Taking the theory to the lab, we study two orders of sale, with the more expensive object being sold first or last. The former is predicted by the theory to be weakly revenue-dominant, which is confirmed by the results of our laboratory experiment.
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Intellegi quidem, ut propter aliam quampiam rem, verbi gratia propter voluptatem, nos amemus; Nec tamen ille erat sapiens quis enim hoc aut quando aut ubi aut unde? Duo Reges: constructio interrete. Non pugnem cum homine, cur tantum habeat in natura boni; Gloriosa ostentatio in constituendo summo bono. Me igitur ipsum ames oportet, non mea, si veri amici futuri sumus. Cur ipse Pythagoras et Aegyptum lustravit et Persarum magos adiit? Quae animi affectio suum cuique tribuens atque hanc, quam dico. Quis est autem dignus nomine hominis, qui unum diem totum velit esse in genere isto voluptatis? Qui si ea, quae dicit, ita sentiret, ut verba significant, quid inter eum et vel Pyrrhonem vel Aristonem interesset?
 
 
-  Keywords: auction, budget constraints, first price, English, laboratory experiment.
+  Keywords: RMarkdown, Latex, template.
 ---
 
 ```{r setup, include=FALSE}
@@ -32,7 +30,7 @@ This is an R Markdown document. Markdown is a simple formatting syntax for autho
 Here is your introduction. It should describe clearly the rationale for the study being done and the previous work related with the study. It should also tell readers about your specific hypothese/questions being addressed. Citations will be like this @krajbich_visual_2010 or like this [@konovalov_revealed_2016].
 
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. Here is some math:
 
 $$ y = x^2 $$
 
