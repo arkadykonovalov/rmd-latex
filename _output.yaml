@@ -1,8 +1,6 @@
 pdf_document:
   citation_package: natbib
   fig_caption: yes
-  fig_height: 4
-  fig_width: 4
   latex_engine: pdflatex
   number_sections: yes
   template: default.latex

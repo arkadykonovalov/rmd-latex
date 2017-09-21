@@ -1,6 +1,8 @@
 ---
 title: 'Here Goes the Title: An RMarkdown Latex Template'
-author: "John Doe^[University of Nowhere]"
+author: 
+- Jane Doe^[University of Nowhere.]
+- John Doe^[University of Everywhere.]
 date: "`r format(Sys.time(), '%B %d, %Y')`"
 
 fontfamily: fourier
@@ -10,8 +12,12 @@ documentclass: article
 biblio-style: apalike
 bibliography: ref.bib
 
+output:
+  pdf_document:
+    fig_height: 3
+    fig_width: 3
 
-thanks: Footnote on the title with acknowledgments.
+thanks: Footnote for the title with acknowledgments.
 abstract: |-
   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Intellegi quidem, ut propter aliam quampiam rem, verbi gratia propter voluptatem, nos amemus; Nec tamen ille erat sapiens quis enim hoc aut quando aut ubi aut unde? Duo Reges: constructio interrete. Non pugnem cum homine, cur tantum habeat in natura boni; Gloriosa ostentatio in constituendo summo bono. Me igitur ipsum ames oportet, non mea, si veri amici futuri sumus. Cur ipse Pythagoras et Aegyptum lustravit et Persarum magos adiit? Quae animi affectio suum cuique tribuens atque hanc, quam dico. Quis est autem dignus nomine hominis, qui unum diem totum velit esse in genere isto voluptatis? Qui si ea, quae dicit, ita sentiret, ut verba significant, quid inter eum et vel Pyrrhonem vel Aristonem interesset?
 
@@ -20,15 +26,15 @@ abstract: |-
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(echo = FALSE)
+library(bookdown)
 ```
 
 # Introduction
 
 This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
 
-Here is your introduction. It should describe clearly the rationale for the study being done and the previous work related with the study. It should also tell readers about your specific hypothese/questions being addressed. Citations will be like this @krajbich_visual_2010 or like this [@konovalov_revealed_2016].
-
+Citations can be added using a bibtex file (here ref.bib) like this: @bhatt_distinct_2012. Or in parentheses [@donahue_cortical_2013]. In RStudio it is convenient to use the **citr** package (https://github.com/crsh/citr) to search and add citations.
 
 When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. Here is some math:
 
@@ -36,11 +42,52 @@ $$ y = x^2 $$
 
 # Results
 
-You can also embed plots, for example:
+## Figures
 
-```{r pressure, echo=FALSE}
-plot(pressure)
+You can insert a figure a code chunk and cite it as Figure \ref{iris}:
+
+```{r fig.cap = "This figure is produced by a code chunk. \\label{iris}"}
+plot(iris)
 ```
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+If you have prepared a figure, insert it this way and again you refer to it as Figure \ref{choice}. Note that the global figure setting does not work for loaded plots and you have to use the *width* parameter, with spaces exactly like in the example:
+
+![This figure was prepared as a PDF file. \label{choice}](fig.pdf){ width=50% }
+
+Alternatively, you can use Latex syntax to have more flexibility.
+
+## Tables
+
+You can insert markdown tables and refer to it as Table \ref{first}: 
+
+Table: \label{first} This is a markdown table.
+
+Condition         N           Result                   
+------------      -------     ------------------      
+First             20          $x$ = 2            
+Second            30          $x$ = 3                    
+Third             40          $x$ = 0                    
+
+Or you can use *kable* function in **knitr** and refer to it as Table \ref{tab2}:
+
+```{r tab2,results='asis',echo=FALSE, message=F, warning=F}
+knitr::kable(cars[1:10,], booktabs = T, caption = "\\label{tab2} This table was made from a dataset.")
+```
+
+Finally, you can insert a latex table (Table \ref{my-label}):
+
+\begin{table}[h]
+\centering
+\caption{This table was generated with latex code.}
+\label{my-label}
+\begin{tabular}{@{}ll@{}}
+\toprule
+One & Two \\ \midrule
+1  & 2  \\ 
+1  & 2  \\ \bottomrule
+\end{tabular}
+\end{table}
+
+# References
+
 

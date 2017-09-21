@@ -1,15 +1,14 @@
 
-## R Markdown
+## In short
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
-
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+This is a simple Rmarkdown template for academic papers based on the default latex template. The main file is **template.rmd**, and the output is **template.pdf**. 
 
 
-## Including Plots
+## Included files
 
-You can also embed plots, for example:
-
-
-
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+- **_output.yaml**: contains output parameters, unlikely to require modification. Note that this file applies to any Rmd file in the same folder.
+- **default.latex**: the latex template. Modify with caution.
+- **fig.pdf**: an example figure.
+- **header.tex**: the list of commands included in the tex header (for instance, a list of required packages).
+- **reb.bib**: an example bibliography in the bibtex format.
+- **word-style.docx**: the style file for Microsoft Word output.
