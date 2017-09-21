@@ -1,7 +1,6 @@
-
 ## In short
 
-This is a simple Rmarkdown template for academic papers based on the default latex template. The main file is **template.rmd**, and the output is **template.pdf**. 
+This is a simple Rmarkdown template for academic papers based on the default latex template. The main file is **template.Rmd**, and the output is **template.pdf**. 
 
 
 ## Included files
